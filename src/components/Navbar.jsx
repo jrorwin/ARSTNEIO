@@ -28,8 +28,8 @@ function Navbar() {
             <Menu.Item>
               {({ active }) => (
                 <button
-                  className={`transition ease-in-out text-neutral-700 ${
-                    active && 'bg-neutral-700 text-neutral-50'
+                  className={`transition ease-in-out ${
+                    active  ? 'bg-neutral-700 text-neutral-50' :' text-neutral-700'
                   } px-5 py-3 rounded-xl w-full flex items-center`}
                   href="/games"
                 >
@@ -49,8 +49,8 @@ function Navbar() {
             <Menu.Item>
               {({ active }) => (
                 <button
-                  className={`transition ease-in-out text-neutral-700 ${
-                    active && 'bg-neutral-700 text-neutral-50'
+                  className={`transition ease-in-out ${
+                  active  ? 'bg-neutral-700 text-neutral-50' :' text-neutral-700'
                   } px-5 py-3 rounded-xl w-full flex items-center`}
                   href="/about"
                 >
