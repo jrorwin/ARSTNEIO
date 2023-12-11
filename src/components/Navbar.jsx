@@ -1,5 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -27,11 +28,13 @@ function Navbar() {
             {/* TODO: React Router needs to be integrated */}
             <Menu.Item>
               {({ active }) => (
-                <button
+                <Link
                   className={`transition ease-in-out ${
-                    active  ? 'bg-neutral-700 text-neutral-50' :' text-neutral-700'
+                    active
+                      ? 'bg-neutral-700 text-neutral-50'
+                      : ' text-neutral-700'
                   } px-5 py-3 rounded-xl w-full flex items-center`}
-                  href="/games"
+                  to="/games"
                 >
                   <span
                     className="material-symbols-outlined mr-3 text-xl"
@@ -43,16 +46,18 @@ function Navbar() {
                     sports_esports
                   </span>
                   <span className="font-bold">Games</span>
-                </button>
+                </Link>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <button
+                <Link
                   className={`transition ease-in-out ${
-                  active  ? 'bg-neutral-700 text-neutral-50' :' text-neutral-700'
+                    active
+                      ? 'bg-neutral-700 text-neutral-50'
+                      : ' text-neutral-700'
                   } px-5 py-3 rounded-xl w-full flex items-center`}
-                  href="/about"
+                  to="/about"
                 >
                   <span
                     className="material-symbols-outlined mr-3  text-xl"
@@ -64,7 +69,7 @@ function Navbar() {
                     info
                   </span>
                   <span className="font-bold">About</span>
-                </button>
+                </Link>
               )}
             </Menu.Item>
           </Menu.Items>
