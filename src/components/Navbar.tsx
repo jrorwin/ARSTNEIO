@@ -5,8 +5,10 @@ import './Navbar.css';
 
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-5 py-1 relative">
-      <a className="text-2xl tracking-[.25em] font-['Oswald'] z-50">ARSTNEIO</a>
+    <nav className="flex justify-between items-center px-5 py-1 relative z-50">
+      <Link to="/" className="text-2xl tracking-[.25em] font-['Oswald'] z-50">
+        ARSTNEIO
+      </Link>
       <Menu as="div">
         <Menu.Button
           className="hamburger hamburger--squeeze relative z-50"
